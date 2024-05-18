@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> <img src="{% static  'university/images/Mogandin.jpg' %}"> Kenneh's University </title>
+     <img src="{% static 'images/image.jpg' %}">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body col-xl-12 col-12 fixed-top mb-5 " data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'university:homepage' %}">Kenneh's University </a>
+        <button style='background:white' class="navbar-toggler" type="button " data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style='background:black'></span>
+        </button>
+        <div class="navbar-collapse collapse show" id="navbarColor01" style="">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class='nav-item' ><a href="{% url 'university:homepage' %}" class="nav-link px-2 text-white">Homepage</a></li>
+            <li class='nav-item'><a href="{% url 'university:education' %}" class="nav-link px-2 text-white">education</a></li>
+            <li class='nav-item'><a href="{% url 'university:alumni' %}" class="nav-link px-2 text-white">Alumini</a></li>
+            <li class='nav-item'><a href="{% url 'university:campus' %}" class="nav-link px-2 text-white">CampusLife</a></li>
+           <li class='nav-item' ><a href="{% url 'university:innovation' %}" class="nav-link px-2 text-white">Innovation</a></li>
+            <li class='nav-item'><a href="{% url 'university:news' %}" class="nav-link px-2 text-white">News</a></li>
+            <li class='nav-item'><a href="{% url 'university:research' %}" class="nav-link px-2 text-white">Research</a></li>
+            <li class='nav-item'><a href="{% url 'university:admission' %}" class="nav-link px-2 text-white">Admission</a></li>
+
+          </ul>
+
+        </div>
+      </div>
+
+    </nav>
+
+
+
+
+<main class='container-fluid mt-5'>
+  {% block content %}
+
+
+  {% endblock %}
+</main>
+  <!-- FOOTER -->
+
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+    <footer class="myfooter"  >
+
+    <hr>
+    <div class="social-medias">
+      <img src="{% static 'univeristy/images/facebok.png' %}" alt="facebook" class="social"  >
+      <img src="{% static 'university/images/linkdin.png' %}" alt="linkdin" class="social"  >
+      <img src="{% static 'university/images/youtube.png' %}" alt="youtube" class="social"  >
+      <img src="{% static 'university/images/whatsapp.png' %}" alt="whatsapp" class="social"  >
+
+    </div>
+
+
+  </footer>
+<!-- End of .container -->
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+  </body>
+</html>

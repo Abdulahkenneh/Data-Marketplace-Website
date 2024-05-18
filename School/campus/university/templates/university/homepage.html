@@ -1,0 +1,29 @@
+{% extends 'university/base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <aside class="col col-12 col-md-3 ">
+            <nav class="navbar navbar-light bg-light">
+              <form class="form-inline col col-sm-12 col-md-3 ">
+                <div class="input-group">
+                    <input type="text" class="form-control col col-md-3 " placeholder="What are you looking for ?" aria-label="Username" aria-describedby="basic-addon1">
+                      <div class="input-group-prepend ">
+
+                          
+                        <input type="submit" class="input-group-text col col-md-  " id="basic-addon1 " value="search">
+                      </div>
+                   </div>
+              </form>
+            </nav>
+
+        </aside>
+
+        
+         <main class="col col-md-8 col-12" style="background:red">
+            this is the main side
+        </main>
+    </div>
+</div>
+
+{% endblock %}
